@@ -153,12 +153,17 @@ instagram = Instagram(username, password)
 instagram.signIn()  # Log into Instagram
 instagram.getFollowers("meetthemusic")  # Retrieve followers of a specific user
 # Example list of users to follow
-user_list = ["user1", "user2", "user3"]
+# Read the list of users to follow from the Excel file
+df = pd.read_excel("D:/FollowBot/githubbotkodu/Instagram-Selenium-Automation-Script/followers.xlsx", engine='openpyxl')
+user_list = df["Instagram Followers"].tolist()
+
+# Extract only the username part from the URLs
+user_list = [url.split("instagram.com/")[1].strip("/") for url in user_list]
 
 # Follow each user in the list with a delay
 for user in user_list:
     instagram.followUser(user)
-    time.sleep(5)
+    time.sleep(600)
 
 # Unfollow a user (commented out)
 #instagram.unFollowUser("enter_username_here")
