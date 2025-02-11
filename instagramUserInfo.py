@@ -1,2 +1,2 @@
-username = "your_user_name"
-password = "your_password"
+username = "caglasilagurbuz"
+password = "@2002Nto@58"
