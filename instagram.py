@@ -151,7 +151,7 @@ class Instagram:
 # Instantiate the Instagram bot with login credentials
 instagram = Instagram(username, password)
 instagram.signIn()  # Log into Instagram
-instagram.getFollowers("meetthemusic")  # Retrieve followers of a specific user
+instagram.getFollowers("makromusic.tr")  # Retrieve followers of a specific user
 # Example list of users to follow
 # Read the list of users to follow from the Excel file
 df = pd.read_excel("D:/FollowBot/githubbotkodu/Instagram-Selenium-Automation-Script/followers.xlsx", engine='openpyxl')
